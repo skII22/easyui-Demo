@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: PhysicalDiagram
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    url: jdbc:mysql://localhost:3306/easyui?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        new_generator_mappings: false
+        format_sql: true
+        ddl-auto: update
+#        dynamic-update : true
+    database: mysql
+    show-sql: true
+
+    #当写的实体类中属性，如果对应表没有该属性的字段，会自动创建一个该属性的字段，规则是属性中大写字母处变成_小写字母的字段，比如userName变成user_name
+
+server:
+  port: 8080
+
