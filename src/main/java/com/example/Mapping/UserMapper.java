@@ -15,8 +15,6 @@ import java.util.List;
 public interface UserMapper extends PagingAndSortingRepository<User,Integer> {
     Date date = new Date();
     SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
-//    @Query(value = "UPDATE physicaldiagram SET name=name,sex=sex,id_type=id_type,id_card=id_card,phone=phone,email=email,pin_name=pin_name,birthday=birthday,updatetime = dateFormat  WHERE id =?1",nativeQuery = true)
-//    public void updateById(Integer id,String name,String sex,String pin_name,String id_type,String id_card,String birthday,String phone ,String email);
     @Modifying
     @Transactional
     @Query("delete  from User WHERE id = ?1")

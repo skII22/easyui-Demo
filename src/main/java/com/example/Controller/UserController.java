@@ -1,7 +1,6 @@
 package com.example.Controller;
 
 import com.example.Entity.User;
-import com.example.Mapping.UserMapper;
 import com.example.Service.UserService;
 import com.example.Util.IDCardUtil;
 import com.example.common.CustomException;
@@ -9,14 +8,8 @@ import com.example.common.Page;
 import com.example.common.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import javax.swing.text.DateFormatter;
 import javax.validation.Valid;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.text.ParseException;
 import java.util.List;
@@ -28,7 +21,6 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserService userService;
-    UserMapper userMapper;
 
     /**
      *
