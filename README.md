@@ -4,4 +4,4 @@
 
 导入进行了数据的校验，前端进行了校验，后端也进行了校验（感觉前端有点多余😂）
 # 延伸阅读
-[](http://img.aliba.eu.org/imgs/项目截图.PNG)
+![](http://img.aliba.eu.org/imgs/项目截图.PNG)
